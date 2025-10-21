@@ -1,117 +1,80 @@
-import { SITE_CONFIG } from "@/lib/constants";
-import { Mail, Github, Linkedin, ExternalLink, MessageSquare } from "lucide-react";
-import { SparklesCore } from "@/components/ui/sparkles";
+"use client";
+import { FaXTwitter, FaLinkedin, FaTelegram, FaDiscord } from "react-icons/fa6";
+import { Cover } from "@/components/ui/cover";
 
 export default function ContactPage() {
+  const email = "rubberpirate27@gmail.com";
+
+  const socialLinks = [
+    {
+      name: "X",
+      handle: "@rubberpirate0",
+      url: "https://x.com/rubberpirate0",
+      icon: <FaXTwitter size={20} />,
+    },
+    {
+      name: "GitHub",
+      handle: "@rubberpirate",
+      url: "https://github.com/rubberpirate",
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+      ),
+    },
+    {
+      name: "LinkedIn",
+      handle: "rahul-rajith",
+      url: "https://linkedin.com/in/rahul-rajith",
+      icon: <FaLinkedin size={20} />,
+    },
+    {
+      name: "Telegram",
+      handle: "@rubberpirate",
+      url: "https://t.me/rubberpirate",
+      icon: <FaTelegram size={20} />,
+    },
+    {
+      name: "Discord",
+      handle: "Join Server",
+      url: "https://discord.gg/Q5Zeg5Wx7d",
+      icon: <FaDiscord size={20} />,
+    },
+  ];
+
   return (
-    <main className="min-h-screen p-8 md:p-16 relative overflow-hidden">
-      {/* Sparkles Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <SparklesCore
-          id="contactSparkles"
-          background="transparent"
-          minSize={0.4}
-          maxSize={1.4}
-          particleDensity={60}
-          className="w-full h-full"
-          particleColor="#52525B"
-          speed={0.5}
-        />
-      </div>
-      
-      <div className="max-w-container mx-auto relative z-10">
-        <h1 className="text-5xl md:text-7xl font-bold mb-8">Contact</h1>
-        
-        <div className="max-w-narrow space-y-12">
-          <section>
-            <p className="text-lg md:text-xl mb-8">
-              Interested in collaborating on cybersecurity projects, CTF teams, 
-              or discussing security research? Feel free to reach out!
-            </p>
+    <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-16 bg-background">
+      <div className="w-full text-center space-y-8 flex flex-col items-center">
+        {/* Heading */}
+        <div className="space-y-4 flex flex-col items-center">
+          <p className="text-sm md:text-base text-accent-muted">
+            Say hi or talk future projects
+          </p>
+          <h1 className="text-4xl md:text-6xl font-light tracking-tight">
+            <Cover>{email}</Cover>
+          </h1>
+        </div>
 
-            {/* Email */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-4">$ echo $EMAIL</h2>
-              <a
-                href={`mailto:${SITE_CONFIG.email}`}
-                className="text-xl hover:underline text-accent flex items-center gap-2"
-              >
-                <Mail size={24} />
-                {SITE_CONFIG.email}
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div>
-              <h2 className="text-2xl font-bold mb-4">$ ls ~/social/</h2>
-              <div className="space-y-4">
-                <a
-                  href={SITE_CONFIG.social.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 border border-border hover:border-accent transition-colors group"
-                >
-                  <Github size={24} />
-                  <div>
-                    <div className="font-medium group-hover:underline">GitHub</div>
-                    <div className="text-sm text-accent-muted">@{SITE_CONFIG.githubUsername}</div>
-                  </div>
-                </a>
-
-                <a
-                  href={SITE_CONFIG.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 border border-border hover:border-accent transition-colors group"
-                >
-                  <Linkedin size={24} />
-                  <div>
-                    <div className="font-medium group-hover:underline">LinkedIn</div>
-                    <div className="text-sm text-accent-muted">Connect professionally</div>
-                  </div>
-                </a>
-
-                <a
-                  href={SITE_CONFIG.social.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 border border-border hover:border-accent transition-colors group"
-                >
-                  <MessageSquare size={24} />
-                  <div>
-                    <div className="font-medium group-hover:underline">Discord</div>
-                    <div className="text-sm text-accent-muted">Join the community</div>
-                  </div>
-                </a>
-
-                <a
-                  href={SITE_CONFIG.social.tryhackme}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 border border-border hover:border-accent transition-colors group"
-                >
-                  <ExternalLink size={24} />
-                  <div>
-                    <div className="font-medium group-hover:underline">TryHackMe</div>
-                    <div className="text-sm text-accent-muted">View my progress</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </section>
-
-          {/* Quick Info */}
-          <section className="border-l-2 border-accent pl-6">
-            <p className="text-sm text-accent-muted mb-2">
-              📍 Based in Andhra Pradesh, India
-            </p>
-            <p className="text-sm text-accent-muted mb-2">
-              🎓 B.Tech CSE @ SRM University AP
-            </p>
-            <p className="text-sm text-accent-muted">
-              💼 Currently: Associate @ Satoshi Lab
-            </p>
-          </section>
+        {/* Social Icons */}
+        <div className="flex items-center justify-center gap-4 pt-4">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 hover:bg-accent/10 transition-colors rounded-full border border-border hover:border-accent"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
       </div>
     </main>

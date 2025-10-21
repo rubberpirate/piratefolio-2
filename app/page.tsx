@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, Github, ExternalLink, Star } from "lucide-react";
+import { ArrowRight, Github, ExternalLink, Star, BookOpen, Calendar } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { NameFlip } from "@/components/ui/name-flip";
@@ -20,8 +20,17 @@ const getProjectImage = (projectName: string): string => {
   return imageMap[projectName] || "";
 };
 
+interface BlogPost {
+  title: string;
+  link: string;
+  pubDate: string;
+  description?: string;
+  categories?: string[];
+}
+
 export default function Home() {
   const [featuredRepos, setFeaturedRepos] = useState<GitHubRepo[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
     async function loadFeaturedRepos() {
@@ -37,7 +46,22 @@ export default function Home() {
         console.error("Error fetching featured repos:", error);
       }
     }
+
+    async function loadBlogPosts() {
+      try {
+        // Replace with your Medium username or Hashnode publication slug
+        // For Medium: https://medium.com/feed/@yourusername
+        // For Hashnode: Use their GraphQL API or RSS feed
+        const response = await fetch('/api/blog');
+        const data = await response.json();
+        setBlogPosts(data.posts || []);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    }
+
     loadFeaturedRepos();
+    loadBlogPosts();
   }, []);
 
   return (
@@ -72,7 +96,7 @@ export default function Home() {
           </div>
           
           <p className="text-base md:text-lg max-w-content">
-            Penetration testing & security research specialist | Bug bounty hunter | CTF competitor
+            Everything in this world is breakable & fixable | Breaking into systems ethically since 2023
           </p>
         </section>
 
@@ -145,6 +169,71 @@ export default function Home() {
               ))
             ) : (
               <p className="text-accent-muted">Loading projects...</p>
+            )}
+          </div>
+        </section>
+
+        {/* Latest Blog Posts */}
+        <section className="mb-16 md:mb-24">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl md:text-5xl font-bold">Latest Posts</h2>
+            <Link
+              href={SITE_CONFIG.social.medium || SITE_CONFIG.social.hashnode || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:underline text-sm"
+            >
+              View all <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.length > 0 ? (
+              blogPosts.slice(0, 3).map((post, index) => (
+                <a
+                  key={index}
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group border border-border p-6 hover:border-accent transition-colors bg-background"
+                >
+                  <div className="flex items-start gap-2 mb-3">
+                    <BookOpen size={18} className="text-accent-muted flex-shrink-0 mt-1" />
+                    <h3 className="text-lg font-bold group-hover:underline line-clamp-2">
+                      {post.title}
+                    </h3>
+                  </div>
+                  
+                  {post.description && (
+                    <p className="text-sm text-accent-muted mb-4 line-clamp-3">
+                      {post.description}
+                    </p>
+                  )}
+                  
+                  <div className="flex items-center gap-2 text-xs text-accent-muted">
+                    <Calendar size={12} />
+                    <span>{new Date(post.pubDate).toLocaleDateString('en-US', { 
+                      month: 'short', 
+                      day: 'numeric', 
+                      year: 'numeric' 
+                    })}</span>
+                  </div>
+                  
+                  {post.categories && post.categories.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {post.categories.slice(0, 2).map((category) => (
+                        <span 
+                          key={category}
+                          className="text-xs px-2 py-1 border border-border"
+                        >
+                          {category}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </a>
+              ))
+            ) : (
+              <p className="text-accent-muted">No blog posts yet</p>
             )}
           </div>
         </section>

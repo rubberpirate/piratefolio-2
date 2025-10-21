@@ -4,6 +4,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { LoaderTwo } from "@/components/ui/loader";
 import { useEffect, useState } from "react";
 import type { GitHubRepo } from "@/lib/github";
 
@@ -151,9 +152,10 @@ export default function WorkPage() {
             ))}
           </BentoGrid>
         ) : (
-          <p className="text-accent-muted">
-            {loading ? "Loading projects..." : "No projects found."}
-          </p>
+          <div className="flex items-center gap-3 text-accent-muted">
+            {loading && <LoaderTwo />}
+            <p>{loading ? "Loading projects..." : "No projects found."}</p>
+          </div>
         )}
       </div>
     </main>

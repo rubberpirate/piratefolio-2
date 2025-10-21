@@ -15,8 +15,10 @@ export const SITE_CONFIG = {
     discord: "https://discord.gg/jpmVydTh",
     tryhackme: "https://tryhackme.com/p/rubberpirate",
     anilist: "https://anilist.co/user/RubberPirate/",
+    medium: "https://medium.com/@rubberpirate",
+    hashnode: "https://hashnode.com/@rubberpirate",
   },
-} as const;
+};
 
 /**
  * Animation variants for Framer Motion
