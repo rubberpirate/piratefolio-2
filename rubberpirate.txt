@@ -1,0 +1,189 @@
+   Initializing system
+
+   rubberpirate@arch
+   [1]home [2]about [3]skills [4]projects [5]certifications [6]experience
+   [7]education
+   00:00:00
+
+   Rubber Pirate Logo
+
+Rubber Pirate
+
+   Cybersecurity Specialist | Ethical Hacker
+   $ whoami
+   > Penetration testing & security research specialist
+   > Bug bounty hunter
+   > CTF competitor
+   $ cat skills.txt
+   Network Security Reverse Engineering Binary Exploitation
+   rahulridhu21@gmail.com
+   [REDACTED]
+
+$ cat ~/about.md
+
+   A cybersecurity enthusiast and B.Tech CSE student at SRM University AP
+   with hands-on experience in penetration testing, digital forensics, and
+   CTF competitions. Currently working as an Associate at Satoshi Lab
+   focusing on cybersecurity initiatives. Proficient in Pentesting, IoT,
+   and Linux systems.
+
+When I'm not hacking:
+
+   Gaming
+   [8]Watching Anime & Movies
+   [9]Reading Manga and Manhwa's
+   Gym and Powerlifting
+
+$ ls -la ~/skills/  
+
+   Security
+   Cybersecurity
+   Penetration Testing
+   Ethical Hacking
+   Digital Forensics
+   CTF
+   Exploit Development
+   Bug Bounty Hunting
+   Network Security
+   Systems & Networks
+   Linux
+   IoT
+   Embedded Hardware
+   Network Protocol Analysis
+
+$ ls -la ~/projects/
+
+SpiritBox
+
+   An IoT security research device that can detect, analyze, and interact
+   with wireless protocols including WiFi, Bluetooth, RFID, and more.
+   ESP32 Python C++ RF
+   [10]View Repository
+
+WebCyphr
+
+   A Chrome extension for real-time traffic encryption, phishing
+   protection, and zero-day vulnerability detection in web applications.
+   JavaScript Chrome API WebSockets Encryption
+   [11]View Repository
+
+Pirate Ducky
+
+   A low-cost alternative to USB Rubber Ducky for penetration testing.
+   Features custom payload creation and Arduino compatibility.
+   Arduino C Python Hardware
+   [12]View Repository
+
+Pirated Tab
+
+   A custom browser startpage with terminal-like interface and quick
+   access to bookmarks and search engines. Features dark mode and
+   customizable shortcuts.
+   JavaScript HTML/CSS LocalStorage Browser API
+   [13]View Repository
+
+Sandwich Files
+
+   An advanced file transfer utility with built-in encryption, perfect for
+   secure data transfer during penetration testing engagements.
+   Python Cryptography Networking Linux
+   [14]View Repository
+
+UpResume
+
+   A modern resume builder with custom templates and AI-powered content
+   suggestions for cybersecurity professionals.
+   JavaScript HTML/CSS React AI Integration
+   [15]View Repository
+
+$ ls -la ~/certifications/
+
+   Hackfinity Certificate
+
+hackfinity Certificate
+
+   TryHackMe
+
+   Issued: Apr 2025
+
+   Credential ID: THM-BORJQ95DDV
+   [16]Show credential
+   Certificate
+
+Certified Ethical Hacker (CEH)
+
+   EC-Council
+
+   Issued: Jan 2025
+
+   Credential ID: ECC1234567
+   [17]Show credential
+
+   More certifications to be added soon.
+
+$ cat ~/experience.log
+
+Associate
+
+   Satoshi Lab, Next Tech Lab - Vijayawada, Andhra Pradesh 10/2024 -
+   Present
+     * Pursuing advanced Cyber-Security initiatives
+     * Developing multiple hardware penetration testing tools focused on
+       ethical hacking
+     * Contributing to team-based security research and development
+       projects
+
+Security Research Intern
+
+   Virtual Internship 05/2024 - 09/2024
+     * Participated in vulnerability research and discovery
+     * Contributed to open-source security projects
+     * Developed proof-of-concept exploits for educational purposes
+
+$ cat ~/education.md
+
+B.Tech - CSE
+
+   SRM University AP - Guntur, Andhra Pradesh Expected Graduation: 05/2028
+   Won Secure-X Hackathon Conducted by BSI Learning and SRMAP
+
+12th - High School
+
+   Army Public School - Kanpur Cantt, Kanpur Completed: 04/2024
+   rubberpirate@arch:~
+   (BUTTON)
+   Welcome to Rubber Pirate's Terminal. Type help to see available
+   commands.
+   rubberpirate@arch:~$ ____________________
+
+   GitHub Stats
+   TryHackMe Stats
+   TryHackMe Badge
+
+References
+
+   Visible links:
+   1. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#home
+   2. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#about
+   3. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#skills
+   4. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#projects
+   5. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#certifications
+   6. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#experience
+   7. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#education
+   8. https://anilist.co/user/RubberPirate/
+   9. https://anilist.co/user/RubberPirate/
+  10. https://github.com/rubberpirate/SpiritBox
+  11. https://github.com/rubberpirate/WebCyphr
+  12. https://github.com/rubberpirate/pirate-ducky
+  13. https://github.com/rubberpirate/Pirated-tab
+  14. https://github.com/rubberpirate/Sendwich-files-transfer
+  15. https://github.com/rubberpirate/UpResume
+  16. https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-BORJQ95DDV.pdf
+  17. file:///tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html
+
+   Hidden links:
+  19. https://github.com/rubberpirate
+  20. https://discord.gg/jpmVydTh
+  21. https://www.linkedin.com/in/rahul-rajith/
+  22. https://tryhackme.com/p/rubberpirate
+  23. file://localhost/tmp/lynxXXXXJ0hHAh/L18076-4339TMP.html#home
