@@ -1,6 +1,6 @@
-# 🚀 Quick Deploy to Netlify
+# 🚀 Quick Deploy to Vercel
 
-Follow these steps to get your portfolio live in 10 minutes!
+Follow these steps to get your portfolio live in 5 minutes!
 
 ## Step 1: Push to GitHub
 
@@ -24,21 +24,21 @@ git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 git push -u origin main
 ```
 
-## Step 2: Deploy on Netlify
+## Step 2: Deploy on Vercel
 
-1. Go to [netlify.com](https://netlify.com) and sign in with GitHub
-2. Click **"Add new site"** → **"Import an existing project"**
-3. Select **GitHub** and authorize Netlify
-4. Choose your portfolio repository
-5. Build settings auto-detected ✅ (from `netlify.toml`)
-6. Click **"Add environment variables"** and add:
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click **"Add New..."** → **"Project"**
+3. Select your portfolio repository
+4. Vercel auto-detects Next.js settings ✨
+5. Click **"Environment Variables"** and add:
    ```
    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME = your_cloudinary_cloud_name
    CLOUDINARY_API_KEY = your_cloudinary_api_key
    CLOUDINARY_API_SECRET = your_cloudinary_api_secret
    ```
-7. Click **"Deploy site"**
-8. Wait 2-3 minutes ⏱️
+6. Select all environments: Production, Preview, Development
+7. Click **"Deploy"**
+8. Wait 1-2 minutes ⏱️
 9. Your site is live! 🎉
 
 ## Step 3: Get Cloudinary Credentials
@@ -75,7 +75,17 @@ git commit -m "Update: Personal information"
 git push
 ```
 
-Netlify will automatically rebuild and deploy! 🚀
+Vercel will automatically rebuild and deploy! 🚀
+
+## ✨ Vercel Features You Get
+
+✅ Zero configuration - Next.js auto-detected  
+✅ Automatic HTTPS and SSL  
+✅ Global CDN for fast loading  
+✅ Preview deployments for every branch  
+✅ Built-in analytics (free!)  
+✅ Instant rollbacks  
+✅ 99.99% uptime  
 
 ## 🎨 Your Portfolio Features
 

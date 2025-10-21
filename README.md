@@ -22,7 +22,7 @@ A minimal, brutalist-style portfolio website built with **Next.js 15**, **React 
 - **Animations**: Framer Motion / Motion
 - **Icons**: Lucide React, Devicons, React Icons
 - **Image Hosting**: Cloudinary
-- **Deployment**: Netlify
+- **Deployment**: Vercel
 
 ## 📦 Installation
 
@@ -58,7 +58,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## 🌐 Deployment
 
-### Deploy to Netlify
+### Deploy to Vercel
 
 1. **Push your code to GitHub**:
 ```bash
@@ -70,18 +70,27 @@ git remote add origin <your-github-repo-url>
 git push -u origin main
 ```
 
-2. **Deploy on Netlify**:
-   - Go to [Netlify](https://netlify.com) and sign in
-   - Click "Add new site" → "Import an existing project"
-   - Connect your GitHub account and select your repository
-   - Build settings are auto-detected from `netlify.toml`
+2. **Deploy on Vercel**:
+   - Go to [Vercel](https://vercel.com) and sign in with GitHub
+   - Click "Add New..." → "Project"
+   - Select your repository
+   - Vercel auto-detects Next.js settings ✨
    - Add environment variables:
      - `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
      - `CLOUDINARY_API_KEY`
      - `CLOUDINARY_API_SECRET`
-   - Click "Deploy site"
+   - Click "Deploy"
 
 Your site will be live in minutes! 🎉
+
+### Why Vercel?
+
+✅ Built for Next.js (zero configuration)  
+✅ Automatic preview deployments  
+✅ Free analytics included  
+✅ Global CDN  
+✅ Instant rollbacks  
+✅ 99.99% uptime  
 
 ## 📁 Project Structure
 

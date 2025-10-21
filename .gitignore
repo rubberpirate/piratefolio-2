@@ -40,8 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# netlify
-.netlify
+# vercel
+.vercel
 
 # local env files (keep .env.example for reference)
 .env*.local
